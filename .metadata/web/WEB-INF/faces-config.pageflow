@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13529202959930" configfile="/SIRCE/web/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="1532" id="pf135301953114414" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf135301953114415 pf135301953114416 pf135301953114417" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="login" x="338" y="1330" id="pf135301953114518" referenceLink="//@navigationRule.10/@fromViewId|" outlinks="pf135301953114519" inlinks="pf135301953114415" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="home" x="554" y="1532" id="pf135301953114520" referenceLink="//@navigationRule.10/@navigationCase.0/@toViewId|" outlinks="pf135301953114521" inlinks="pf135301953114416 pf135301953114519" path="/home.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="acessonegado" x="338" y="1735" id="pf135301953114522" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf135301953114417" path="/acessonegado.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listLogin" x="122" y="178" id="pf135301953114523" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf135301953114524" path="/listLogin.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="editLogin" x="338" y="178" id="pf135301953114525" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf135301953114524" path="/editLogin.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listEspecialidade" x="122" y="562" id="pf135301953114526" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf135301953114527" path="/listEspecialidade.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="formEspecialidade" x="338" y="562" id="pf135301953114528" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf135301953114527" path="/formEspecialidade.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listTipoExame" x="122" y="946" id="pf135301953114629" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf135301953114630" path="/listTipoExame.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="formTipoExame" x="338" y="946" id="pf135301953114631" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf135301953114630" path="/formTipoExame.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listUnidade" x="122" y="2191" id="pf135301953114632" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf135301953114633" path="/listUnidade.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="formUnidade" x="338" y="2191" id="pf135301953114634" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf135301953114633" path="/formUnidade.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listPaciente" x="554" y="1148" id="pf135301953114635" referenceLink="//@navigationRule.7/@fromViewId|" outlinks="pf135301953114636" path="/listPaciente.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="formPaciente" x="770" y="1340" id="pf135301953114637" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" inlinks="pf135301953114636 pf135301953114521" path="/formPaciente.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listMedico" x="122" y="2647" id="pf135301953114738" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf135301953114739" path="/listMedico.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="formMedico" x="338" y="2647" id="pf135301953114740" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" inlinks="pf135301953114739" path="/formMedico.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listProntRegistro" x="122" y="3031" id="pf135301953114741" referenceLink="//@navigationRule.11/@fromViewId|" outlinks="pf135301953114742" path="/listProntRegistro.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="formProntuario" x="338" y="3223" id="pf135301953114743" referenceLink="//@navigationRule.12/@navigationCase.0/@toViewId|" inlinks="pf135301953114742 pf135301953114744" path="/formProntuario.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listProntVisualiza" x="122" y="3415" id="pf135301953114745" referenceLink="//@navigationRule.12/@fromViewId|" outlinks="pf135301953114744" path="/listProntVisualiza.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listAgendaMedica" x="122" y="3799" id="pf135301953114746" referenceLink="//@navigationRule.13/@fromViewId|" outlinks="pf135301953114747" path="/listAgendaMedica.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="formAgendaMedica" x="338" y="3799" id="pf135301953114748" referenceLink="//@navigationRule.13/@navigationCase.0/@toViewId|" inlinks="pf135301953114747" path="/formAgendaMedica.jsp"/>
+  <links id="pf135301953114415" target="pf135301953114518" source="pf135301953114414" outcome="loginPage" redirect="true"/>
+  <links id="pf135301953114416" target="pf135301953114520" source="pf135301953114414" outcome="homePage" redirect="true"/>
+  <links id="pf135301953114417" target="pf135301953114522" source="pf135301953114414" outcome="acessoNegado" redirect="true"/>
+  <links id="pf135301953114524" target="pf135301953114525" source="pf135301953114523" outcome="editLogin"/>
+  <links id="pf135301953114527" target="pf135301953114528" source="pf135301953114526" outcome="editEspecialidade"/>
+  <links id="pf135301953114630" target="pf135301953114631" source="pf135301953114629" outcome="editTipoExame"/>
+  <links id="pf135301953114633" target="pf135301953114634" source="pf135301953114632" outcome="editUnidade"/>
+  <links id="pf135301953114636" target="pf135301953114637" source="pf135301953114635" outcome="editPaciente"/>
+  <links id="pf135301953114521" target="pf135301953114637" source="pf135301953114520" outcome="cadPaciente"/>
+  <links id="pf135301953114739" target="pf135301953114740" source="pf135301953114738" outcome="editMedico"/>
+  <links id="pf135301953114519" target="pf135301953114520" source="pf135301953114518" outcome="sucessoLogin"/>
+  <links id="pf135301953114742" target="pf135301953114743" source="pf135301953114741" outcome="editProntuario"/>
+  <links id="pf135301953114744" target="pf135301953114743" source="pf135301953114745" outcome="editProntuario"/>
+  <links id="pf135301953114747" target="pf135301953114748" source="pf135301953114746" outcome="editAgenda"/>
+</pageflow:Pageflow>
