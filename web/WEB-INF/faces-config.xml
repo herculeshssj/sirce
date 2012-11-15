@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+  
+  	Copyright (c) 2010 JOSE, Hércules S. S. et al.
+
+    Este arquivo é parte do programa SIRCE.
+    
+
+    SIRCE é um software livre; você pode redistribui-lo e/ou modificá-lo 
+
+    dentro dos termos da Licença Pública Geral Menor GNU como publicada 
+
+    pela Fundação do Software Livre (FSF); na versão 2.1 da Licença. 
+
+
+    Este programa é distribuído na esperança que possa ser útil, 
+
+    mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÂO a 
+    
+    qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a Licença Pública 
+    
+    Geral Menor GNU em português para maiores detalhes.
+    
+
+    Você deve ter recebido uma cópia da Licença Pública Geral Menor GNU sob o 
+
+    nome de "LICENSE.TXT" junto com este programa, se não, acesse o site HSlife
+    
+    no endereco www.hslife.com.br ou escreva para a Fundação do Software 
+    
+    Livre(FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+    
+
+    Para mais informações sobre o programa SIRCE e seus autores acesse o 
+
+    endereço www.hslife.com.br, pelo e-mail contato@hslife.com.br ou escreva para 
+
+    Hércules S. S. José, Av. Ministro Lafaeyte de Andrade, 1683 - Bl. 3 Apt 404, 
+
+    Marco II - Nova Iguaçu, RJ, Brasil.
+  
+  -->
+  
+	<!--
+		=========== FULL CONFIGURATION FILE ==================================
+	-->
+
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+
+<!-- ManagedBeans -->
+
+	<managed-bean>
+		<managed-bean-name>LoginMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.LoginMB</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>EspecialidadeMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.EspecialidadeMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>TipoExameMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.TipoExameMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>UnidadeMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.UnidadeMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>PacienteMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.PacienteMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>MedicoMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.MedicoMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>ProntuarioMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.ProntuarioMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>AgendaMedicaMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.AgendaMedicaMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>ConsultaMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.ConsultaMB</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>ExameMB</managed-bean-name>
+		<managed-bean-class>br.com.sirce.controle.ExameMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<!-- ManagedBeans -->
+
+	<!-- Validator -->
+
+	<validator>
+		<validator-id>validacpf</validator-id>
+		<validator-class>br.com.sirce.validacao.CpfValidar</validator-class>
+	</validator>
+
+	<!-- Validator -->
+
+	<!-- Converter -->
+
+	<converter>
+		<converter-id>converterturno</converter-id>
+		<converter-class>br.com.sirce.conversao.TurnoConverter</converter-class>
+	</converter>
+	<converter>
+		<converter-id>converterdiasemana</converter-id>
+		<converter-class>br.com.sirce.conversao.DiaSemanaConverter</converter-class>
+	</converter>
+	<converter>
+		<converter-id>converterperfil</converter-id>
+		<converter-class>br.com.sirce.conversao.PerfilConverter</converter-class>
+	</converter>
+	<converter>
+		<converter-id>convertercompareceu</converter-id>
+		<converter-class>br.com.sirce.conversao.CompareceuConverter</converter-class>
+	</converter>
+	<converter>
+		<converter-id>converterrg</converter-id>
+		<converter-class>br.com.sirce.conversao.RgConverter</converter-class>
+	</converter>
+
+	<!-- Converter -->
+
+	<!-- PhaseListener -->
+
+	<lifecycle>
+		<phase-listener>br.com.sirce.listener.AutorizacaoListener</phase-listener>
+	</lifecycle>
+
+	<!-- PhaseListener -->
+
+	<!-- Navigation Rules -->
+
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>loginPage</from-outcome>
+			<to-view-id>/login.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>homePage</from-outcome>
+			<to-view-id>/home.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>acessoNegado</from-outcome>
+			<to-view-id>/acessonegado.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listLogin.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editLogin</from-outcome>
+			<to-view-id>/editLogin.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listEspecialidade.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editEspecialidade</from-outcome>
+			<to-view-id>/formEspecialidade.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listTipoExame.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editTipoExame</from-outcome>
+			<to-view-id>/formTipoExame.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listUnidade.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editUnidade</from-outcome>
+			<to-view-id>/formUnidade.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listPaciente.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editPaciente</from-outcome>
+			<to-view-id>/formPaciente.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/home.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadPaciente</from-outcome>
+			<to-view-id>/formPaciente.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listMedico.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editMedico</from-outcome>
+			<to-view-id>/formMedico.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>sucessoLogin</from-outcome>
+			<to-view-id>/home.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listProntRegistro.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editProntuario</from-outcome>
+			<to-view-id>/formProntuario.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listProntVisualiza.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editProntuario</from-outcome>
+			<to-view-id>/formProntuario.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listAgendaMedica.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editAgenda</from-outcome>
+			<to-view-id>/formAgendaMedica.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- Navigation Rules -->
+</faces-config>
