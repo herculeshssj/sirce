@@ -95,7 +95,7 @@ public class AgendaMedicaMB {
 		return resultado;
 	}
 
-	public void salvar() {
+	public String salvar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
 		if (agenda.getId() == null || agenda.getId() == 0) {
@@ -123,7 +123,7 @@ public class AgendaMedicaMB {
 		listaAgendas = new ArrayList<AgendaMedica>();
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmAgendaMedica", mensagem);
-
+		return "";
 	}
 
 	public String editar() {
@@ -142,7 +142,7 @@ public class AgendaMedicaMB {
 		return resultado;
 	}
 
-	public void excluir() {
+	public String excluir() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
 		if (!LoginMB.usuarioLogado.getPerfil().equals("ADMIN")) {
@@ -158,7 +158,7 @@ public class AgendaMedicaMB {
 		} }
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("lstAgendaMedica", mensagem);
-
+		return "";
 	}
 
 	public void pesquisar() {
@@ -180,7 +180,7 @@ public class AgendaMedicaMB {
 
 	}
 	
-	public void pesquisaMedico() {
+	public String pesquisaMedico() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "Registros carregados com sucesso!";
 		if (LoginMB.usuarioLogado.getPerfil().equals("MEDIC")) {
@@ -199,6 +199,7 @@ public class AgendaMedicaMB {
 		}}
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("lstConsulta", mensagem);
+		return "";
 	}
 
 	public String getBusca() {

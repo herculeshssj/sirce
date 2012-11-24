@@ -125,7 +125,7 @@ public class ConsultaMB {
         medicos = new ArrayList<SelectItem>();
 	}
 
-	public void agendar() {		
+	public String agendar() {		
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
                 especialidades = new ArrayList<SelectItem>();
@@ -175,9 +175,10 @@ public class ConsultaMB {
 		}	*/
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmConsulta", mensagem);
+		return "";
 	}
 
-	public void pesquisar() {
+	public String pesquisar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "Registros carregados com sucesso!";
 		try {
@@ -193,9 +194,10 @@ public class ConsultaMB {
 		}
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("lstConsulta", mensagem);
+		return "";
 	}
 	
-	public void pesquisaMedico() {
+	public String pesquisaMedico() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "Registros carregados com sucesso!";
 		try {
@@ -212,8 +214,10 @@ public class ConsultaMB {
 	
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("lstConsulta", mensagem);
+		return "";
 	}	
-	public void pesquisaEspecialidade() {
+	
+	public String pesquisaEspecialidade() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "Registros carregados com sucesso!";
 		try {
@@ -229,9 +233,10 @@ public class ConsultaMB {
 		}
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("lstConsulta", mensagem);
+		return "";
 	}
 
-	public void registrar() {
+	public String registrar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
 		consulta = dao.buscar(idConsulta);
@@ -246,9 +251,10 @@ public class ConsultaMB {
 		listaConsultas = dao.listarMarcados();
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmConsulta", mensagem);
+		return "";
 	}
 
-	public void desmarcar() {
+	public String desmarcar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
 		if (LoginMB.usuarioLogado.getPerfil().equals("MEDIC")) {
@@ -266,6 +272,7 @@ public class ConsultaMB {
 		listaConsultas = dao.listarMarcados();
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmConsulta", mensagem);
+		return "";
 	}
 	
 	public String carregaEspecialidades(ValueChangeEvent event) {

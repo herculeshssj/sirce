@@ -80,7 +80,7 @@ public class EspecialidadeMB {
 		return resultado;
 	}
 
-	public void salvar() {
+	public String salvar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";		
 			if (especialidade.getId() == null || especialidade.getId() == 0) {
@@ -106,6 +106,7 @@ public class EspecialidadeMB {
 		listaEspecialidades = new ArrayList<Especialidade>();
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmEspecialidade", mensagem);
+		return "";
 	}
 
 	public String editar() {
@@ -123,7 +124,7 @@ public class EspecialidadeMB {
 		return resultado;
 	}
 
-	public void pesquisar() {
+	public String pesquisar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "Registros carregados com sucesso!";
 		setListaEspecialidades(dao.procurar("descricao", busca));
@@ -135,6 +136,7 @@ public class EspecialidadeMB {
 		}
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("lstEspecialidade", mensagem);
+		return "";
 	}
 
 	/**

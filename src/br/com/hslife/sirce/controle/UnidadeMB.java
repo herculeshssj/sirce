@@ -93,7 +93,7 @@ public class UnidadeMB {
 		return resultado;
 	}
 
-    public void salvar() {
+    public String salvar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         if (unidade.getId() == null || unidade.getId() == 0) {
@@ -122,6 +122,7 @@ public class UnidadeMB {
         listaUnidades = new ArrayList<Unidade>();
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("frmUnidade", mensagem);
+        return "";
     }
 
     public String editar() {
@@ -141,7 +142,7 @@ public class UnidadeMB {
         return resultado;
     }
 
-    public void pesquisar() {
+    public String pesquisar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "Registros carregados com sucesso!";
         listaUnidades = dao.procurar("nomeUnidade", busca);
@@ -153,6 +154,7 @@ public class UnidadeMB {
         }
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("lstUnidade", mensagem);
+        return "";
     }
 
     /**

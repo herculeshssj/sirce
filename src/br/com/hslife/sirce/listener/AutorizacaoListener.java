@@ -53,6 +53,11 @@ import br.com.hslife.sirce.modelo.Login;
 
 public class AutorizacaoListener implements PhaseListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public void afterPhase(PhaseEvent event) {
 		// TODO Auto-generated method stub
 		FacesContext contexto = event.getFacesContext();

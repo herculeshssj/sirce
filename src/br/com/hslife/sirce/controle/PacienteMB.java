@@ -112,7 +112,7 @@ public class PacienteMB {
 		return resultado;
 	}
 
-    public void salvar() {
+    public String salvar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         if (paciente.getId() == null || paciente.getId() == 0) {
@@ -141,6 +141,7 @@ public class PacienteMB {
         listaPaciente = new ArrayList<Paciente>();
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("frmPaciente", mensagem);
+        return "";
     }
 
     public String editar() {
@@ -160,7 +161,7 @@ public class PacienteMB {
         return resultado;
     }
 
-    public void pesquisar() {
+    public String pesquisar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "Registros carregados com sucesso!";        
         listaPaciente = dao.procurar("nome", busca);
@@ -172,6 +173,7 @@ public class PacienteMB {
         }
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("lstPaciente", mensagem);
+        return "";
     }
 
     private void geraComboDataNasc() {

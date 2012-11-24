@@ -64,7 +64,7 @@ public class HibernateUtil {
             // Create the SessionFactory from standard (hibernate.cfg.xml) 
             // config file.
             sessionFactory = new AnnotationConfiguration()
-                    .configure("br/com/sirce/hibernate/hibernate.cfg.xml")
+                    .configure("br/com/hslife/sirce/hibernate/hibernate.cfg.xml")
                     .buildSessionFactory();
         } catch (Throwable ex) {
             // Log the exception. 

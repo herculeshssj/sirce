@@ -91,7 +91,7 @@ public class ExameMB {
 		}
 	}
 
-	public void agendar() {
+	public String agendar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
 		exame.getTipo().setId(idTipo);
@@ -114,9 +114,10 @@ public class ExameMB {
 		listaExames = dao.listarMarcados();
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmExame", mensagem);
+		return "";
 	}
 
-	public void pesquisar() {
+	public String pesquisar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "Registros carregados com sucesso!";        
         listaExames = dao.buscarPaciente(busca);
@@ -128,9 +129,10 @@ public class ExameMB {
         }
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("lstExame", mensagem);
+        return "";
 	}
 
-	public void registrar() {
+	public String registrar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
 		exame = dao.buscar(idExame);
@@ -144,9 +146,10 @@ public class ExameMB {
 		listaExames = dao.listarMarcados();
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmExame", mensagem);
+		return "";
 	}
 
-	public void desmarcar() {
+	public String desmarcar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		String msg = "";
 		if (LoginMB.usuarioLogado.getPerfil().equals("MEDIC")) {
@@ -162,6 +165,7 @@ public class ExameMB {
 		listaExames = dao.listarMarcados();
 		FacesMessage mensagem = new FacesMessage(msg);
 		contexto.addMessage("frmExame", mensagem);
+		return "";
 	}
 
 	public Exame getExame() {

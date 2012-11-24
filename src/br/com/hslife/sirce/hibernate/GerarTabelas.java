@@ -67,7 +67,7 @@ public class GerarTabelas {
 
     public static void geraTabelas() {
         Configuration cfg = new AnnotationConfiguration();
-        cfg.configure("br/com/sirce/hibernate/hibernate.cfg.xml");
+        cfg.configure("br/com/hslife/sirce/hibernate/hibernate.cfg.xml");
 
         SchemaExport se = new SchemaExport(cfg);
         se.create(true, true);

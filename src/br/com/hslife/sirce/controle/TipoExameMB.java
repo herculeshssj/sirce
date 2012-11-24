@@ -80,7 +80,7 @@ public class TipoExameMB {
 		return resultado;
 	}
     
-    public void salvar() {
+    public String salvar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         if (getTipoExame().getId() == null || getTipoExame().getId() == 0) {
@@ -106,6 +106,7 @@ public class TipoExameMB {
         setListaTipoExames(new ArrayList<TipoExame>());
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("frmTipoExame", mensagem);
+        return "";
     }
 
     public String editar() {
@@ -123,7 +124,7 @@ public class TipoExameMB {
         return resultado;
     }
 
-    public void pesquisar() {
+    public String pesquisar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "Registros carregados com sucesso!";
         setListaTipoExames(getDao().procurar("descricao", getBusca()));
@@ -135,6 +136,7 @@ public class TipoExameMB {
         }
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("lstTipoExame", mensagem);
+        return "";
     }
 
     /**

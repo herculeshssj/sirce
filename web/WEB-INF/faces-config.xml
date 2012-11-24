@@ -54,52 +54,52 @@
 
 	<managed-bean>
 		<managed-bean-name>LoginMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.LoginMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.LoginMB</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>EspecialidadeMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.EspecialidadeMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.EspecialidadeMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>TipoExameMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.TipoExameMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.TipoExameMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>UnidadeMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.UnidadeMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.UnidadeMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>PacienteMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.PacienteMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.PacienteMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>MedicoMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.MedicoMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.MedicoMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>ProntuarioMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.ProntuarioMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.ProntuarioMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>AgendaMedicaMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.AgendaMedicaMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.AgendaMedicaMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>ConsultaMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.ConsultaMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.ConsultaMB</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>ExameMB</managed-bean-name>
-		<managed-bean-class>br.com.sirce.controle.ExameMB</managed-bean-class>
+		<managed-bean-class>br.com.hslife.sirce.controle.ExameMB</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 
@@ -109,7 +109,7 @@
 
 	<validator>
 		<validator-id>validacpf</validator-id>
-		<validator-class>br.com.sirce.validacao.CpfValidar</validator-class>
+		<validator-class>br.com.hslife.sirce.validacao.CpfValidar</validator-class>
 	</validator>
 
 	<!-- Validator -->
@@ -118,23 +118,23 @@
 
 	<converter>
 		<converter-id>converterturno</converter-id>
-		<converter-class>br.com.sirce.conversao.TurnoConverter</converter-class>
+		<converter-class>br.com.hslife.sirce.conversao.TurnoConverter</converter-class>
 	</converter>
 	<converter>
 		<converter-id>converterdiasemana</converter-id>
-		<converter-class>br.com.sirce.conversao.DiaSemanaConverter</converter-class>
+		<converter-class>br.com.hslife.sirce.conversao.DiaSemanaConverter</converter-class>
 	</converter>
 	<converter>
 		<converter-id>converterperfil</converter-id>
-		<converter-class>br.com.sirce.conversao.PerfilConverter</converter-class>
+		<converter-class>br.com.hslife.sirce.conversao.PerfilConverter</converter-class>
 	</converter>
 	<converter>
 		<converter-id>convertercompareceu</converter-id>
-		<converter-class>br.com.sirce.conversao.CompareceuConverter</converter-class>
+		<converter-class>br.com.hslife.sirce.conversao.CompareceuConverter</converter-class>
 	</converter>
 	<converter>
 		<converter-id>converterrg</converter-id>
-		<converter-class>br.com.sirce.conversao.RgConverter</converter-class>
+		<converter-class>br.com.hslife.sirce.conversao.RgConverter</converter-class>
 	</converter>
 
 	<!-- Converter -->
@@ -142,7 +142,7 @@
 	<!-- PhaseListener -->
 
 	<lifecycle>
-		<phase-listener>br.com.sirce.listener.AutorizacaoListener</phase-listener>
+		<phase-listener>br.com.hslife.sirce.listener.AutorizacaoListener</phase-listener>
 	</lifecycle>
 
 	<!-- PhaseListener -->

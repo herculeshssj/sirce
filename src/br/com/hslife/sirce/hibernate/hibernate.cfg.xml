@@ -50,17 +50,18 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sirce</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
-   <mapping class="br.com.sirce.modelo.Login"/>
-    <mapping class="br.com.sirce.modelo.Endereco"/>
-    <mapping class="br.com.sirce.modelo.Especialidade"/>
-    <mapping class="br.com.sirce.modelo.Unidade"/>
-    <mapping class="br.com.sirce.modelo.Paciente"/>
-    <mapping class="br.com.sirce.modelo.Medico"/>
-    <mapping class="br.com.sirce.modelo.TipoExame"/>
-    <mapping class="br.com.sirce.modelo.Prontuario"/>
-    <mapping class="br.com.sirce.modelo.AgendaMedica"/>
-    <mapping class="br.com.sirce.modelo.Consulta"/>
-    <mapping class="br.com.sirce.modelo.Exame"/>
-    <mapping class="br.com.sirce.modelo.AgendaDiaria"/>
+    
+   	<mapping class="br.com.hslife.sirce.modelo.Login"/>
+    <mapping class="br.com.hslife.sirce.modelo.Endereco"/>
+    <mapping class="br.com.hslife.sirce.modelo.Especialidade"/>
+    <mapping class="br.com.hslife.sirce.modelo.Unidade"/>
+    <mapping class="br.com.hslife.sirce.modelo.Paciente"/>
+    <mapping class="br.com.hslife.sirce.modelo.Medico"/>
+    <mapping class="br.com.hslife.sirce.modelo.TipoExame"/>
+    <mapping class="br.com.hslife.sirce.modelo.Prontuario"/>
+    <mapping class="br.com.hslife.sirce.modelo.AgendaMedica"/>
+    <mapping class="br.com.hslife.sirce.modelo.Consulta"/>
+    <mapping class="br.com.hslife.sirce.modelo.Exame"/>
+    <mapping class="br.com.hslife.sirce.modelo.AgendaDiaria"/>
   </session-factory>
 </hibernate-configuration>

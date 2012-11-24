@@ -101,7 +101,7 @@ public class MedicoMB {
 		return resultado;
 	}
     
-    public void salvar() {
+    public String salvar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         if (getMedico().getId() == null || getMedico().getId() == 0) {
@@ -131,6 +131,7 @@ public class MedicoMB {
         setListaMedicos(new ArrayList<Medico>());
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("frmMedico", mensagem);
+        return "";
     }
 
     public String editar() {
@@ -150,7 +151,7 @@ public class MedicoMB {
         return resultado;
     }
 
-    public void pesquisar() {
+    public String pesquisar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "Registros carregados com sucesso!";
         listaMedicos = dao.procurar("crm", busca);
@@ -162,6 +163,7 @@ public class MedicoMB {
         }
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("lstMedico", mensagem);
+        return "";
     }
 
     /**

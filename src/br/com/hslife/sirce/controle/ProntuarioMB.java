@@ -109,7 +109,7 @@ public class ProntuarioMB {
 		}
     }
 
-    public void salvar() {
+    public String salvar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         prontuario.getPaciente().setId(idPaciente);
@@ -125,6 +125,7 @@ public class ProntuarioMB {
         //setListaProntuario(new ArrayList<Prontuario>());
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("frmProntuario", mensagem);
+        return "";
     }
 
     public String editar() {
@@ -171,7 +172,7 @@ public class ProntuarioMB {
         contexto.addMessage("lstProntuario", mensagem);
     }
 
-    public void pesquisar() {
+    public String pesquisar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "Registros carregados com sucesso!";
         listaPacientes = daoP.procurar("nome", busca);
@@ -183,6 +184,7 @@ public class ProntuarioMB {
         }
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("lstProntuario", mensagem);
+        return "";
     }
 
     /**

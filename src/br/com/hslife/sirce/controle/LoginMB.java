@@ -104,7 +104,7 @@ public class LoginMB {
         return "loginPage";
     }
 
-    public void salvar() {
+    public String salvar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         login.setUsuarioSenha(Util.SHA1(login.getUsuarioSenha()));
@@ -123,6 +123,7 @@ public class LoginMB {
         }
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("frmLogin", mensagem);
+        return "";
     }
 
     public String editar() {
@@ -140,7 +141,7 @@ public class LoginMB {
         return resultado;
     }
 
-    public void alterar() {
+    public String alterar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         senhaAtual = Util.SHA1(senhaAtual);
@@ -168,9 +169,10 @@ public class LoginMB {
 
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("formLogin", mensagem);
+        return "";
     }
 
-    public void ativarDesativar() {
+    public String ativarDesativar() {
         FacesContext contexto = FacesContext.getCurrentInstance();
         String msg = "";
         login = dao.buscar(idLogin);
@@ -190,6 +192,7 @@ public class LoginMB {
         login = new Login();
         FacesMessage mensagem = new FacesMessage(msg);
         contexto.addMessage("lstLogin", mensagem);
+        return "";
     }
 
     /**
