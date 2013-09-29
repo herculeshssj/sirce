@@ -93,7 +93,7 @@ alter table Prontuario add index FKEF8D69D9255FECDA (idMedico), add constraint F
 alter table Prontuario add index FKEF8D69D911C5872A (idPaciente), add constraint FKEF8D69D911C5872A foreign key (idPaciente) references Paciente (id);
 alter table Unidade add index FK521D528E86D22FDA (idEndereco), add constraint FK521D528E86D22FDA foreign key (idEndereco) references Endereco (id);
 
-insert into Login(id, ativo, datacriacao, nomeusuario, perfil, usuariologin, usuariosenha) values (1, true, '2011-01-01', 'Administrador do Sistema', 'ADMIN', 'admin', 'f865b53623b121fd34ee5426c792e5c33af8c227');
+insert into Login(id, ativo, datacriacao, nomeusuario, perfil, usuariologin, usuariosenha) values (1, true, '2011-01-01', 'Administrador do Sistema', 'ADMIN', 'admin', 'f865b53623b121fd34ee5426c792e5c33af8c227'); -- senha: admin123
 
 /* Fim do script */
 

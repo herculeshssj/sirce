@@ -48,8 +48,8 @@
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sirce</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.connection.username">sirce</property>
+    <property name="hibernate.connection.password">s1RC3</property>
     
    	<mapping class="br.com.hslife.sirce.modelo.Login"/>
     <mapping class="br.com.hslife.sirce.modelo.Endereco"/>
