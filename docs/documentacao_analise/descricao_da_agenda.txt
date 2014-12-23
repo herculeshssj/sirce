@@ -1,0 +1,19 @@
+desmarcar consulta ou exame
+1- unidade acessa a agenda.
+2- sistema mostra o formulario da agenda
+3- unidade digita o nome do paciente
+4- sistema mostra consulta e ou exame que está agendado para o paciente
+5- unidade desmarca a consulta ou o exame que o paciente solicitou a desmarcação
+6- sistema informa uma mensagem dizendo que a desmarcação foi feita com sucesso.
+
+
+gerenciar agenda
+
+1- central acessa a genda
+2- sistema mostra o formulario da agenda
+3- central verifica quantidades de vagas por especialidade e por unidades
+4- sistema mostra através de uma tabela
+5- central agenda o paciente que uma unidade solicitante solicitou
+6- sistema informa uma menagem dizendo que o paciente foi agendado com sucesso.
+7- central salva o formulario no doc. e envia por email para a unidade solicitante.
+
