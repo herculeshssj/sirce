@@ -6,9 +6,7 @@ Sistema de Regularização de Consultas e Exames
 
 Sistema para marcação de consultas e exames. Permite redistribuir as consultas marcadas entre as unidades médicas a fim de evitar falta de vagas. Mantém registro das consultas e exames marcados e dos diagnósticos feitos pelos médicos.
 
-Página do projeto: http://hslife.com.br/projects/sirce/
-
-Requisitos:
+### Requisitos:
 
 * Java JDK SE 6 ou superior;
 * Eclipse Helios 3.6 ou superior;
@@ -19,7 +17,7 @@ Requisitos:
 * OpenProj 1.4 ou superior;
 * Windows ou Linux, qualquer versão capaz de rodar os softwares acima.
 
-Links de download:
+### Links de download:
 
 * *Java JDK SE 6*: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 * *Eclipse Helios*: http://www.eclipse.org/downloads
@@ -29,7 +27,7 @@ Links de download:
 * *OpenProj*: http://sourceforge.net/projects/openproj/?source=dlp
 * *astah Community*: http://astah.net/editions/community
 
-Configuração do MySQL:
+### Configuração do MySQL:
 
 Após instalar o MySQL, acesse via console ou usando uma ferramenta gráfica de administração e execute os seguintes comandos:
 
