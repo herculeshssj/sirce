@@ -39,3 +39,5 @@ create database sirce;
 create user 'sirce'@'localhost' identified by 's1RC3';
 grant all privileges on sirce.* to 'sirce'@'localhost' with grant option;
 ```
+
+Dentro do projeto, no pacote **br.com.hslife.sirce.hibernate**, execute o arquivo **script.sql** para realizar a criação das tabelas da base.

@@ -42,6 +42,7 @@
 
 /* Criação das tabelas */
 
+/* Exclui as tabelas caso existam 
 alter table AgendaDiaria drop foreign key FKBB1365A244DC4FB;
 alter table AgendaMedica drop foreign key FK1AD5B087255FECDA;
 alter table Consulta drop foreign key FKE202E615244DC4FB;
@@ -67,6 +68,7 @@ drop table if exists Paciente;
 drop table if exists Prontuario;
 drop table if exists TipoExame;
 drop table if exists Unidade;
+*/
 create table AgendaDiaria (id integer not null auto_increment, data date, disponivel integer, idAgenda integer, primary key (id));
 create table AgendaMedica (id integer not null auto_increment, diaSemana integer not null, turno integer not null, vagas integer not null, idMedico integer, primary key (id));
 create table Consulta (id integer not null auto_increment, compareceu bit, dataConsulta date, turno integer not null, idAgenda integer, idMedico integer, idPaciente integer, primary key (id));
@@ -97,24 +99,24 @@ insert into Login(id, ativo, datacriacao, nomeusuario, perfil, usuariologin, usu
 
 /* Fim do script */
 
---select * from especialidade;
---select * from unidade
---select * from endereco
---select * from medico
---select * from tipoexame
---select * from paciente
+-- select * from especialidade;
+-- select * from unidade
+-- select * from endereco
+-- select * from medico
+-- select * from tipoexame
+-- select * from paciente
 
---insert into especialidade(descricao) values ('Dermatologia');
---insert into especialidade(descricao) values ('Clínico Geral');
---insert into especialidade(descricao) values ('Cardiologia');
+-- insert into especialidade(descricao) values ('Dermatologia');
+-- insert into especialidade(descricao) values ('Clínico Geral');
+-- insert into especialidade(descricao) values ('Cardiologia');
 
 
---insert into tipoexame(descricao) values ('Cancer de pele')
---insert into tipoexame(descricao) values ('Eletrocardiograma')
---insert into tipoexame(descricao) values ('Hemograma completo')
+-- insert into tipoexame(descricao) values ('Cancer de pele')
+-- insert into tipoexame(descricao) values ('Eletrocardiograma')
+-- insert into tipoexame(descricao) values ('Hemograma completo')
 
---insert into medico(crm, nome, idEspecialidade, idUnidade) values ('12345', 'Carlos',1,1)
---insert into medico(crm, nome, idEspecialidade, idUnidade) values ('98765', 'Daniele',3,1)
+-- insert into medico(crm, nome, idEspecialidade, idUnidade) values ('12345', 'Carlos',1,1)
+-- insert into medico(crm, nome, idEspecialidade, idUnidade) values ('98765', 'Daniele',3,1)
 
 -- Para realizar a inserção de unidade e paciente, rode as classes de teste
 
@@ -130,7 +132,7 @@ create table agendaexame(
 )
 */
 
---select * from agendaexame
+-- select * from agendaexame
 
 --insert into agendaexame (idPaciente, idUnidade, data, hora, idTipoExame) values(1,1,15,9,1)
 --insert into agendaexame (idPaciente, idUnidade, data, hora, idTipoExame) values(1,1,15,10,1)
@@ -140,31 +142,31 @@ create table agendaexame(
 --insert into agendaexame (idPaciente, idUnidade, data, hora, idTipoExame) values(1,1,16,7,1)
 
 -- Procura os exames marcados para o tipo de exame para determinado dia
---select * from agendaexame where data=15 and idTipoExame=3
+-- select * from agendaexame where data=15 and idTipoExame=3
 
 
 -- Listar todos os exames já marcados pelo paciente para determinado dia
---select * from agendaexame where idPaciente=1
+-- select * from agendaexame where idPaciente=1
 
 /* Sequencia para inclusão de nova marcação de exame */
 -- 1º: procurar exames marcados para o tipo de exame no dia solicitado
---select * from agendaexame where data=15 and idTipoExame=1
+-- select * from agendaexame where data=15 and idTipoExame=1
 
 -- 2º: ao cadastrar verificar se aquele paciente já tem outro exame marcado para o dia e horário escolhido
---select * from agendaexame where idPaciente=1 and data=16 and hora=9
+-- select * from agendaexame where idPaciente=1 and data=16 and hora=9
 -- Se tiver, apresentar uma mensagem de erro, caso contrário, realizar a inclusão
 
 -- 3º: cadastrar o agendamento para o dia, horário e o tipo de exame
---insert into agendaexame (idPaciente, idUnidade, data, hora, idTipoExame) values(1,1,16,9,1)
+-- insert into agendaexame (idPaciente, idUnidade, data, hora, idTipoExame) values(1,1,16,9,1)
 /* Fim da sequencia */
 
 
---select * from medico
---select * from agendaexame
+-- select * from medico
+-- select * from agendaexame
 
 
---alter table agendaexame add column compareceu int
---update agendaexame set compareceu = 0
+-- alter table agendaexame add column compareceu int
+-- update agendaexame set compareceu = 0
 
 /*
 create table agendamedica(
@@ -176,57 +178,57 @@ create table agendamedica(
     primary key(id)
 )
 */
---select * from agendamedica
+-- select * from agendamedica
 
---insert into agendamedica (diasemana, turno, vagas, idMedico) values ('ter', 'integral', '10', 1)
---insert into agendamedica (diasemana, turno, vagas, idMedico) values ('qua', 'tarde', '3', 1)
---insert into agendamedica (diasemana, turno, vagas, idMedico) values ('seg', 'manha', '10', 2);
---insert into agendamedica (diasemana, turno, vagas, idMedico) values ('ter', 'manha', '10', 2);
---insert into agendamedica (diasemana, turno, vagas, idMedico) values ('qua', 'manha', '10', 2);
---insert into agendamedica (diasemana, turno, vagas, idMedico) values ('qui', 'manha', '10', 2);
---insert into agendamedica (diasemana, turno, vagas, idMedico) values ('sex', 'manha', '10', 2);
+-- insert into agendamedica (diasemana, turno, vagas, idMedico) values ('ter', 'integral', '10', 1)
+-- insert into agendamedica (diasemana, turno, vagas, idMedico) values ('qua', 'tarde', '3', 1)
+-- insert into agendamedica (diasemana, turno, vagas, idMedico) values ('seg', 'manha', '10', 2);
+-- insert into agendamedica (diasemana, turno, vagas, idMedico) values ('ter', 'manha', '10', 2);
+-- insert into agendamedica (diasemana, turno, vagas, idMedico) values ('qua', 'manha', '10', 2);
+-- insert into agendamedica (diasemana, turno, vagas, idMedico) values ('qui', 'manha', '10', 2);
+-- insert into agendamedica (diasemana, turno, vagas, idMedico) values ('sex', 'manha', '10', 2);
 
 -- Para montar a agenda médica é necessário lançar todos os dias da semana que o médico estará disponível,
 -- o turno e a quantidade de vagas que ele poderá atender
 
---select * from medico
+-- select * from medico
 -- Jorge Armando: 12
 -- Denise Fraga: 13
 -- Ulisses Lima: 14
 
---select * from paciente
+-- select * from paciente
 -- Hércules: 32
 -- Claudia: 34
 -- Richard: 37
 
---select * from agendamedica where idmedico=12
+-- select * from agendamedica where idmedico=12
 -- Jorge Armando: Seg, integral, 10 vagas; Qua, integral, 10 vagas, Sex, manhã, 5 vagas
 -- Denise Fraga: Ter, manhã, 6 vagas; Quinta, tarde, 6 vagas; Sábado, manhã, 3 vagas
 -- Ulisses Lima: Segunda a sexta, integral, 10 vagas por dia; Sábado, manhã, 5 vagas
 
 -- Horários: 07:00 às 11:00 - manhã
---	     12:00 às 16:00 - tarde
---	     07:00 às 16:00 - integral
+-- 12:00 às 16:00 - tarde
+-- 07:00 às 16:00 - integral
 
---select * from consulta
+-- select * from consulta
 -- Consulta: idmedico, idpaciente, dataconsulta, turno, compareceu
 
 -- Consulta: obter todas as consultas marcadas para o dia informado e médico informado e que o paciente ainda não compareceu
---select * from consulta where idmedico =12 and dataconsulta='2010-12-15' and compareceu = false
+-- select * from consulta where idmedico =12 and dataconsulta='2010-12-15' and compareceu = false
 
 -- Verifico se o médico atende para o dia da semana informado
 
---SELECT EXTRACT(DOW FROM DATE '2010-12-4');
+-- SELECT EXTRACT(DOW FROM DATE '2010-12-4');
 
 -- Consulta: verifico se o médico informado atende no dia da semana escolhido
---select * from agendamedica where idmedico=12 and diasemana = (select extract(dow from date '2010-12-15'));
---select * from agendamedica where idmedico=14 and diasemana=4
+-- select * from agendamedica where idmedico=12 and diasemana = (select extract(dow from date '2010-12-15'));
+-- select * from agendamedica where idmedico=14 and diasemana=4
 
 
---select * from exame
+-- select * from exame
 
---select * from tipoexame
---select * from exame where idtipoexame=5 and data='2010-12-11' and hora=8 and compareceu=false
+-- select * from tipoexame
+-- select * from exame where idtipoexame=5 and data='2010-12-11' and hora=8 and compareceu=false
 /*
 
 select * from consulta
